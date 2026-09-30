@@ -1,0 +1,5 @@
+Coloque suas 15 fotos nesta pasta com estes nomes:
+foto1.jpeg, foto2.jpeg, foto3.jpeg ... foto15.jpeg
+
+Dica: a foto1.jpeg é a primeira imagem do quebra-cabeça (prefira foto quadrada ou quase).
+Para mudar legendas ou usar outro formato, edite o arquivo js/config.js.

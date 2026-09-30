@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#170b15">
+<title>Jogos · Hugo & Clarinha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body class="game">
+
+<header class="top">
+  <a href="index.html" class="back" aria-label="Voltar">‹</a>
+  <h1>Jogos do casal</h1>
+</header>
+
+<div class="tabs" role="tablist">
+  <button role="tab" class="tab active" data-tab="puzzle">🧩 Puzzle</button>
+  <button role="tab" class="tab" data-tab="memoria">🃏 Memória</button>
+</div>
+
+<main>
+  <!-- ========== PUZZLE ========== -->
+  <section class="panel active" id="puzzle">
+    <p class="hint">Deslize as peças até montar a foto.</p>
+    <div class="stats"><span>Movimentos <b id="p-moves">0</b></span><span>Tempo <b id="p-time">0:00</b></span></div>
+    <div class="board" id="p-board"></div>
+    <div class="row" id="p-pick"></div>
+    <div class="row">
+      <button class="chip" data-size="3">3×3</button>
+      <button class="chip" data-size="4">4×4</button>
+      <button class="chip" id="p-peek">👀 Ver foto</button>
+      <button class="chip" id="p-shuffle">🔀 Embaralhar</button>
+    </div>
+  </section>
+
+  <!-- ========== MEMÓRIA ========== -->
+  <section class="panel" id="memoria">
+    <p class="hint">Encontre os pares da nossa história.</p>
+    <div class="stats"><span>Jogadas <b id="m-moves">0</b></span><span>Pares <b id="m-pairs">0/6</b></span></div>
+    <div class="mgrid" id="m-grid"></div>
+    <div class="row"><button class="chip" id="m-new">🔄 Recomeçar</button></div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <div class="big" id="modal-emoji">🎉</div>
+    <h2 id="modal-title">Parabéns!</h2>
+    <p id="modal-text"></p>
+    <button class="btn" id="modal-close">Continuar</button>
+  </div>
+</div>
+
+<nav class="dock" aria-label="Navegação">
+  <a href="index.html"><span>🎉</span>Início</a>
+  <a href="index.html#galeria"><span>📷</span>Fotos</a>
+  <a href="index.html#carta"><span>💌</span>Carta</a>
+  <a href="jogo.html" class="active"><span>🎮</span>Jogo</a>
+</nav>
+
+<script src="js/config.js"></script>
+<script src="js/confetti.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
